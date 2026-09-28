@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #cdb72b;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+.animate-fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+.animate-zoom-in {
+    animation: zoomIn 0.5s ease-out forwards;
+}
+.animate-glow-pulse {
+    animation: glowPulse 2s infinite alternate ease-in-out;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 5px #facc15, 0 0 10px #facc15;
+    }
+    to {
+        box-shadow: 0 0 10px #f43f5e, 0 0 20px #f43f5e;
+    }
+}
+.hero-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8vw;
+    color: rgba(255, 255, 255, 0.08);
+    font-weight: 900;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+}
